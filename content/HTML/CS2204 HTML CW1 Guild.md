@@ -794,3 +794,5 @@ Heres some useful links to find colours, fonts, and css tutorials:
 - Find and use different fonts: [Google Fonts](https://fonts.google.com)
 - Find different icons/logos: [Icon8](https://icons8.com/icons)
 - CSS tutorial website: [W3 Schools](https://www.w3schools.com/css/css_colors.asp)
+- Hong Kong Disneyland website: [Hong Kong Disneyland](https://www.hongkongdisneyland.com)
+- California USA Disneyland webstie: [CA Disneyland](https://disneyland.disney.go.com/destinations/disneyland/)

@@ -43,6 +43,9 @@ tags:
 > > [!example]+ **javascript**
 > > *(leave the folder empty for CW1)*
 > 
+
+> [!note]
+> When you download the image from canvas, the original folder name is `images` with **s**. Remember to **rename** it to `image` without **s**, as the requirement says.
 ### Preparation
 Let's prepare the basic structure of the html files. You may copy this structure to all 3 html files (`index.html`, `order.html`, `design.html`).
 > [!info]

@@ -272,7 +272,7 @@ i.e. reverse of the original input
 ## <Question 5>
 ### Related Concepts
 - [[Notes for Assignment 1#What is Big-Oh|What is Big-Oh]]
-- [[Notes for Assignment 1#Worst Case / Best Case / Average Case | Worst Case / Best Case / Average Case]]
+- [[Notes for Assignment 1#Worst Case / Best Case / Average Case | Worst Case  Best Case  Average Case]]
 
 ### The Question
 > Answer the following questions by analysing the program complexity.
@@ -300,7 +300,7 @@ i.e. reverse of the original input
 > The running times only matter when the input size gets really big. So we need to see the worst-case running time.
 ## <Question 6>
 ### Related Concepts
-- [[Notes for Assignment 1#Worst Case / Best Case / Average Case | Worst Case / Best Case / Average Case]]
+- [[Notes for Assignment 1#Worst Case / Best Case / Average Case | Worst Case  Best Case  Average Case]]
 
 ### The Question
 > **6.** You are given a task to find whether the first word of a paragraph appears at least twice in the paragraph, and you decide to write a program to scan the word one by one from the very beginning of the text. What’s the worst case for your program? Describe the situation for the worst case and explain why.

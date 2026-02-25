@@ -25,6 +25,7 @@ char ch = 'a';
 bool flag = true;
 ```
 And in the memory:
+
 ![[pointer_1.png  | 500]]
 
 ---
@@ -52,6 +53,7 @@ For better understanding, let’s try to translate the symbols `*` and `&` into 
 | :---------------------------: | :------------------: |
 |     create a **pointer**      | the **address** of X |
 | the thing **pointed** to by X |                      |
+
 For example:
 
 | Code             | Translate                                                                  | Note                    |
@@ -154,7 +156,8 @@ ListNode* Search(int val) {
 Imagine we are going to add a node **after** a node (let's call it A). We need two steps:
 1. Set `next` of the new node to `next` of A.
 2. Set `next` of A to the new node.
-![[linked_list_3.png | 700]]
+
+![[linked_list_3.png]]
 ```cpp
 ListNode* A;
 // Imagine we already find the A
@@ -170,7 +173,8 @@ A -> next = new_node; // Step 2
 To delete a node (let's call it D), we also need two steps:
 1. Find the D's previous node.
 2. Change `next` of the previous node to `next` of D.
-![[linked_list_4.png | 700]]
+
+![[linked_list_4.png ]]
 ```cpp
 ListNode* D;
 // Imagine we have already found the D
@@ -210,8 +214,8 @@ To pop an item:
 1. Check if the stack is **empty**.
 - If yes, we say stack **underflow**
 - If not, the process could proceed.
-1. Remove the item from the top.
-2. Update the `top` pointer.
+2. Remove the item from the top.
+3. Update the `top` pointer.
 ![[stack_4.png | 400]]
 ### LIFO(Last In First Out) Principle
 Because the push and pop are always at the top, it's easy to see that the **last** element **pushed** onto the stack (3 in the example below) is the **first** to be **popped**.
@@ -243,7 +247,9 @@ Approximately, the computer takes the same amount of time to run each **basic op
 | Comparing two numbers                 | `x < 5`        |
 | Indexing into a Vector/Array          | `a[5]`         |
 | Returning from a function             | `return x;`    |
+
 Each of them count as "1 operation" (1ops).
+
 So if we know the **relationship between the number of operation and the input**(usually use Math function $T(n)$ to represent), we can predict the running time when the input get larger.
 
 For example, $n$ is an input, if $T(n)=2n^2+2n+1$, then:
@@ -254,6 +260,7 @@ For example, $n$ is an input, if $T(n)=2n^2+2n+1$, then:
 | 2             | $2\times 2^2 + 2 \times 2 + 1 = 13$      |
 | 100           | $2\times 100^2 + 2\times 100 + 1 =20201$ |
 | ...           | ...                                      |
+
 Then, if we know the running time of one input, we can predict others easily.
 
 For the example above, if we also knows when $n=2$, the running time is $1.3~second$
@@ -263,6 +270,7 @@ i.e.
 | $n$ equals to | Total numbers of Operations         | Running Time |
 | ------------- | ----------------------------------- | ------------ |
 | 2             | $2\times 2^2 + 2 \times 2 + 1 = 13$ | $1.3~second$ |
+
 So each operation takes $1.3s/13=0.1~second$
 
 To predict the running time of the input $n=100$:
@@ -270,12 +278,13 @@ To predict the running time of the input $n=100$:
 | $n$ equals to | Total numbers of Operations              | Running Time                              |
 | ------------- | ---------------------------------------- | ----------------------------------------- |
 | 100           | $2\times 100^2 + 2\times 100 + 1 =20201$ | $20201 \times 0.1~second = 2020.1~second$ |
+
 [[Guidance & my answer for Assignment 1#<Question 4>|Back to Question 4]]
 ## What is Big-Oh
 > [!caution]
-> This is a **really scattered** version to explain the big-oh notation, it only tells you how to use the big-oh, but I haven't explain why using this method makes sense.
+> This is a really scattered explanation of big-oh notation; it only tells you how to use big-oh, but I haven't explained why this method makes sense.
 > 
-> But this is enough to finish the question of assignment.
+> But this is enough to finish the assignment question.
 
 In most cases, we only cares about the efficiency when the input is extremely large. (Since small inputs takes nearly no time)
 
@@ -284,6 +293,7 @@ The Big-Oh notation is a way to show the **approximate** growth rate of a math f
 Here's the detail rules:
 
 1. **Times a constant** number can be ignore
+
 For example:
 $$T(n)=10000n^2$$
 The big oh is $O(n^2)$, ignore the $10000$
@@ -291,12 +301,15 @@ The big oh is $O(n^2)$, ignore the $10000$
 Even though the constant number is lower than 1, we need to ignore it. Like $T(n) = \frac{1}{2} n$, $O(n)=n$
 
 2. **Add a constant** number can be ignore
+
 For example:
 $$T(n) = n + 10000$$
 The big oh is $O(n)$, ignore the $10000$
 
 3. Only leave the **"biggest" part**. Follows the following order:
+
 $$O(1)<O(\log n)<O(n)<O(n\log n)<O(n^2)<O(n^3)<...<O(2^n)<O(3^n)<...<O(n!)$$
+
 For example:
 $$T(n) = n\log n + n+ n^2$$
 Here, $n^2$ is the "biggest" part. The big oh is $O(n^2)$. Ignore other parts.
@@ -309,8 +322,11 @@ When running code for a real problem, different cases may lead to significantly 
 For example, we have  $n$ different numbers in an array, and we want to find the number 7. If we search from the beginning until the end, here are four different cases:
 
 **[Case 1]** The number 7 is the **first** element of the array. We only need to search for **1** item.
+
 **[Case 2]** The number 7 is the **last** element of the array. We need to search all **n** items.
+
 **[Case 3]** The number 7 is not included in the array. We still need to search all **n** items to find out.
+
 **[Case 4]** The number 7 is the **x (1<x<n)** element of the array. We need to search **x** items.
 
 In this example, we say:

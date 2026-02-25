@@ -10,3 +10,4 @@ const Content: QuartzComponent = ({ fileData, tree }: QuartzComponentProps) => {
 }
 
 export default (() => Content) satisfies QuartzComponentConstructor
+

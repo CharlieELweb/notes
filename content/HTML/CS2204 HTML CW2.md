@@ -3,6 +3,9 @@ title: CS2204 HTML CW2
 draft: false
 tags:
 ---
+***Update: fixed `order.js` to fulfil requirement 5.1***
+ 
+---
 
 > **Due Date:** 14 April 2025, **Tuesday**, 23:59 PM<br>
 > **Deliverable:** Compress the root folder into a `zip` file.
@@ -507,11 +510,25 @@ window.onload = function () {
 > [!hint]
 > This is the best solution for this problem. You may copy the code directly without any plagiarism concerns, since I'll submit a completely different method to solve this problem.
 ## 5. Order Page Interaction
+> [!note] Update
+> ***Fixed `order.js` to fulfil requirement 5.1***
+
 Below is the full code of `javascript/order.js`:
 ```js
-items = []
+items = [];
 
 window.onload = function () {
+    let ticket_heading = document.querySelector('.menu_heading.ticket');
+    let ticket_content =  document.querySelector('.menu_content.ticket');
+    ticket_heading.style.backgroundColor = "white";
+    ticket_content.style.display = "block"
+    document.querySelectorAll('.menu_heading').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            ticket_heading.style = '';
+            ticket_content.style = '';
+        });
+    });
+
     document.querySelectorAll('.menu input[type="submit"]').forEach(submitButton => {
         submitButton.onclick = function() {
             let desc = this.parentElement.parentElement.querySelector("img").alt;
@@ -565,6 +582,8 @@ function Recal() {
         <td class="quantity">${sum}</td>
     `;
 }
+
+
 ```
 > [!hint]
 > This is the best solution for this problem. You may copy the code directly without any plagiarism concerns, since I'll submit a completely different method to solve this problem.

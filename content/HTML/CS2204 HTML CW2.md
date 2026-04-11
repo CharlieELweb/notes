@@ -3,6 +3,7 @@ title: CS2204 HTML CW2
 draft: false
 tags:
 ---
+***Update2: Fixed `order.html`, deleted the initial content in the ordered item table***
 ***Update: fixed `order.js` to fulfil requirement 5.1***
  
 ---
@@ -186,6 +187,10 @@ tags:
 > [!note]
 > For other requirements, we've already fulfilled in the CW1.
 ## 3. Order Page Web elements positioning and effects
+> [!note] Update
+> ***Fixed `order.html`, deleted the initial content in the ordered item table***
+
+
 - Change the `html/order.html` structure as follows, and replace the **\*\*Header Content\*\***  from the CW1:
 ```html
 <!DOCTYPE html>
@@ -308,18 +313,6 @@ tags:
                 </thead>
                 
                 <tbody>
-                    <tr>
-            <td class="description" id="total">Total</td>
-            <td class="quantity" id="totalqty">0</td>
-          </tr>
-          <tr>
-            <td class="description" id="total">Total</td>
-            <td class="quantity" id="totalqty">0</td>
-          </tr>
-          <tr>
-            <td class="description" id="total">Total</td>
-            <td class="quantity" id="totalqty">0</td>
-          </tr>
                 </tbody>
         
                 <tfoot>
